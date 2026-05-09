@@ -1,0 +1,35 @@
+{
+  "entities": {
+    "Goal": {
+      "title": "Goal",
+      "description": "A user goal for the year",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The goal text"
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Whether the goal is completed"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the goal was created"
+        },
+        "userId": {
+          "type": "string",
+          "description": "The UID of the owner"
+        }
+      },
+      "required": ["title", "completed", "createdAt", "userId"]
+    }
+  },
+  "firestore": {
+    "goals": {
+      "schema": "Goal",
+      "description": "Collection of user goals"
+    }
+  }
+}
